@@ -7,9 +7,9 @@ const app = express();
 app.use(cors());
 
 if (!process.env.PORT) {
-
 throw new Error(`Please specify the port number for the HTTP server with the environment variable PORT.`);
 }
+
 const port = process.env.PORT;
 app.get('/', (req, res) => {
   res.send('Arithmetic service - last updated: 03/04/2024');
